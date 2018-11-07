@@ -115,7 +115,7 @@ module.exports = {
         {
             id: "p1", type: "panel",
             label: "Descripción", width: 100,
-            fields: ["name", "consolidatedinterface_id", "item_id", "quantity", "position", "start_date", "start_time", "end_date", "end_time"]
+            fields: ["name", "consolidatedinterface_id", "item_id", "quantity", "position", "start_date", "start_time", "end_date", "end_time", "picking_time"]
         },
     ]
 };
