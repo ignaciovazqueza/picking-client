@@ -1,25 +1,22 @@
-# Evolutility-UI-React
+# Picking-Client
 
-Evolutility-UI-React provides a set of React Views to display and interact with objects of different data structures. These views work together to provide full web apps. 
+Picking-Client provides a set of React Views to display and interact with objects of different data structures. These views work together to provide full web apps. 
 
-With Evolutility-UI-React you can quickly make a web application UI by configuring views with metadata instead of hand-coding Javascript, CSS, and HTML.
+With Picking-Client you can quickly make a web application UI by configuring views with metadata instead of hand-coding Javascript, CSS, and HTML.
 
-Evolutility-UI-React works hand-in-hand with [Evolutility-Server-Node](https://github.com/evoluteur/evolutility-server-node) which provides the matching REST endpoints based on the same metadata.
-
-This project is a **work in progress**. I'm still learning React.
-
+Picking-Client works hand-in-hand with [Picking-Server](https://github.com/ignaciovazqueza/picking-server) which provides the matching REST endpoints based on the same metadata.
 
 
 ## Installation
 
-[**Download**](https://github.com/evoluteur/evolutility-ui-react/archive/master.zip) or **clone** from [GitHub](https://github.com/evoluteur/evolutility-ui-react/).
+[**Download**](https://github.com/ignaciovazqueza/picking-client/archive/master.zip) or **clone** from [GitHub](https://github.com/ignaciovazqueza/picking-client/).
 
 ```bash
 # To get the latest stable version, use git from the command line.
-git clone https://github.com/evoluteur/evolutility-ui-react
+git clone https://github.com/ignaciovazqueza/picking-client.git
 ```
 
-In the Evolutility-UI-React directory, use the command line to type the following:
+In the Picking-Client directory, use the command line to type the following:
 
 ```bash
 # Install dependencies
@@ -32,14 +29,14 @@ npm start
 
 In a web browser, go to the url [http://localhost:8080/](http://localhost:8080/).
 
-For the REST endpoints, you also need to setup [Evolutility-Server-Node](https://github.com/evoluteur/evolutility-server-node).
+For the REST endpoints, you also need to setup [Picking-Server-Node](https://github.com/ignaciovazqueza/picking-server).
 
 
 ## Views
 
 For any object, a single model defines UI elements across views in a simple declarative way.
 
-Evolutility-UI-React provides 2 types of view:
+Picking-Client provides 2 types of view:
 
 * Views for a model: [Browse](#browse), [Edit](#edit).
 * Views for a collection: [List](#list), [Cards](#cards), [Charts](#charts).
@@ -54,7 +51,7 @@ Shows all fields for viewing (read only). Fields are grouped in panels.
 
 ![Browse](https://raw.githubusercontent.com/evoluteur/evolutility-ui-react/master/public/screenshots/comics/one-browse.gif)
 
-Code: [/src/components/views/one/Browse.js](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/components/views/one/Browse.js)
+Code: [/src/components/views/one/Browse.js](https://github.com/ignaciovazqueza/picking-client/blob/master/src/components/views/one/Browse.js)
 
 ### Edit
 This view shows all fields for edition to create or update records.
@@ -63,7 +60,7 @@ Fields are grouped in panels and tabs.
 
 ![Edit](https://raw.githubusercontent.com/evoluteur/evolutility-ui-react/master/public/screenshots/comics/one-edit.gif)
 
-Code: [/src/components/views/one/Edit.js](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/components/views/one/Edit.js)
+Code: [/src/components/views/one/Edit.js](https://github.com/ignaciovazqueza/picking-client/blob/master/src/components/views/one/Edit.js)
 
 
 ## Views for Many objects
@@ -72,23 +69,21 @@ Gives a tabular view of a collection.
 
 ![List](https://raw.githubusercontent.com/evoluteur/evolutility-ui-react/master/public/screenshots/comics/many-list.gif)
 
-Code: [/src/components/views/many/List.js](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/components/views/many/List.js)
+Code: [/src/components/views/many/List.js](https://github.com/ignaciovazqueza/picking-client/blob/master/src/components/views/many/List.js)
 
 ### Cards
 Shows records side by side as cards.
 
 ![Cards](https://raw.githubusercontent.com/evoluteur/evolutility-ui-react/master/public/screenshots/comics/many-cards.gif)
 
-Code: [/src/components/views/many/Cards.js](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/components/views/many/Cards.js)
+Code: [/src/components/views/many/Cards.js](https://github.com/ignaciovazqueza/picking-client/blob/master/src/components/views/many/Cards.js)
 
 ### Charts
 Draws charts about the collection.
 
 ![Charts](https://raw.githubusercontent.com/evoluteur/evolutility-ui-react/master/public/screenshots/comics/many-charts.gif)
 
-Code: [/src/components/views/many/Charts.js](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/components/views/many/Charts.js)
-
-
+Code: [/src/components/views/many/Charts.js](https://github.com/ignaciovazqueza/picking-client/blob/master/src/components/views/many/Charts.js)
 
 
 ## Models
@@ -142,125 +137,60 @@ The following example is the model for a simple graphic novels inventory app.
 
 ```javascript
 module.exports = {
-    id: "comics",
-    label: "Graphic Novels",
-    name: "graphic novel serie",
-    namePlural: "graphic novel series",
-    icon: "comics.png",
-    titleField: "title",
-    searchFields: ["title", "authors", "notes"]
+    id: "item",
+    entity: "item",
+    table: "item",
+    active: true,
 
-	fields:[
-      {
-          id: "title", type: "text", label: "Title", required: true, 
-          maxLength: 255,
-          width: 100, inMany: true
-      },
-      {
-          id: "authors", type: "text", width: 62, inMany: true,
-          label: "Authors"
-      },
-      {
-          id: "genre", type: "lov", label: "Genre", 
-          width: 38, inMany: true,
-          list: [
-            {id: 1, text: "Adventure"},
-            {id: 2, text: "Fairy tale"},
-            {id: 3, text: "Erotic"},
-            {id: 4, text: "Fantastic"},
-            {id: 5, text: "Heroic Fantasy"},
-            {id: 6, text: "Historic"},
-            {id: 7, text: "Humor"},
-            {id: 8, text: "One of a kind"},
-            {id: 9, text: "Youth"},
-            {id: 10, text: "Thriller"},
-            {id: 11, text: "Science-fiction"},
-            {id: 12, text: "Super Heros"},
-            {id: 13, text: "Western"} 
-          ]
-      },
-      {
-          id: "serie_nb", type: "integer", 
-          width: 15, inMany: false,
-          label: "Albums", noCharts: true 
-      },
-      {
-          id: "have_nb", type: "integer", 
-          width: 15, inMany: false,
-          label: "Owned", noCharts: true 
-      },
-      {
-          id: "have", type: "text", 
-          width: 15, inMany: false,
-          label: "Have" 
-      },
-      {
-          id: "language", type: "lov", label: "Language", 
-          width: 17, inMany: true,
-          lovicon: true,
-          list: [
-            {id: 2, text: "French", icon:"flag_fr.gif"},
-            {id: 1, text: "American", icon:"flag_us.gif"}
-          ]
-      },
-      {
-          id: "complete", type: "boolean", 
-          width: 19, inMany: false,
-          label: "Complete"
-      },
-      {
-          id: "finished", type: "boolean", 
-          width: 19, inMany: false,
-          label: "Finished"
-      },
-      {
-          id: "pix", type: "image", 
-          width: 30, inMany: true,
-          label: "Cover"
-      },
-      {
-          id: "notes", type: "textmultiline", 
-          label: "Notes", maxLength: 1000,
-          width: 70, height: 7, inMany: false
-      }
-  ],
+    titleField: "name",
+    searchFields: ["sku", "name", "position"],
 
-  groups: [
-      { 
-        id:"serie", type: "panel", label: "Serie", width: 70,
-        fields: ["title", "authors", "genre", 
-              "serie_nb", "have_nb", "have", 
-              "language", "complete", "finished", "notes"]
-      },
-      { 
-        id:"pix", type: "panel", label: "Album Cover", width: 30,
-        fields: ["pix"]
-      }
-  ]
-}
+    label: "Artículos",
+    name: "artículo",
+    namePlural: "artículos",
 
+    fields: [
+        {
+            id: "name",
+            label: "Nombre",
+            column: "name",
+            type: "text",
+            maxLength: 50,
+            inMany: true,
+            required: true
+        },
+        {
+            id: "sku",
+            label: "SKU",
+            column: "sku",
+            type: "text",
+            maxLength: 20,
+            inMany: true,
+            required: true
+        },
+        {
+            id: "position",
+            label: "Posición",
+            column: "position",
+            type: "text",
+            maxLength: 20,
+            inMany: true,
+            required: true
+        }
+    ],
 
+    groups: [
+        {
+            id: "p1", type: "panel",
+            label: "Descripción", width: 100,
+            fields: ["name", "sku", "position"]
+        },
+    ]
+};
 ```
 
-More sample models: [To-do list](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/models/todo.js),
- [Address book](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/models/contact.js),
-  [Restaurants list](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/models/restaurant.js),
-    [Wine cellar](https://github.com/evoluteur/evolutility-ui-react/blob/master/src/models/winecellar.js). 
-
-
-## Other implementations of Evolutility
-
-[Evolutility-UI-jQuery](https://github.com/evoluteur/evolutility-ui-jquery) - Model-driven Web UI for CRUD using jQuery and Backbone (for REST or localStorage).
-
-[Evolutility-Server-Node](https://github.com/evoluteur/evolutility-server-node) - RESTful Micro-ORM for CRUD and more, written in Javascript, using Node.js, Express, and Postgres.
-
-[Evolutility-ASP.net](https://github.com/evoluteur/evolutility-asp.net) - Lightweight CRUD framework for heavy lifting with ASP.net and Microsoft SQL-Server.
 
 ## License
 
 Copyright (c) 2018 [Olivier Giulieri](https://evoluteur.github.io/).
-
-Evolutility-UI-React is released under the [MIT license](http://github.com/evoluteur/evolutility-ui-react/blob/master/LICENSE.md).
-
-To suggest a feature or report a bug: [https://github.com/evoluteur/evolutility-ui-react/issues](https://github.com/evoluteur/evolutility-ui-react/issues)
 
