@@ -9,38 +9,38 @@ module.exports = {
 
     // --- toolbar & buttons for actions ---
     i18n_actions:{
-        browse: 'Browse',
-        edit: 'Edit',
+        browse: 'Buscar',
+        edit: 'Editar',
         // login: 'Login',
-        new: 'New',
-        newEntity: 'New {0}', //'New Item',
+        new: 'Agregar',
+        newEntity: 'Agregar {0}', //'New Item',
         //newUpload: 'New Upload',
         //search: 'Search',
         //newSearch: 'New Search',
         //searchRes: 'Search Result',
         //selection: 'Selection',
         //selections: 'Selections',
-        export1: 'Export',
+        export1: 'Exportar CSV',
         //import: 'Import',
         //massUpdate: 'Mass Update',
-        delete1: 'Delete',
+        delete1: 'Eliminar',
         //bAll: 'All',
-        list: 'List',
-        cards: 'Cards',
+        list: 'Listar',
+        cards: 'Cartas',
         //bJSON: 'JSON',
-        filter: 'Filter',
+        filter: 'Filtrar',
         //bScatter:'Scatter',
         charts: 'Charts',
         //refresh: 'Refresh',
         //print: 'Print',
-        save: 'Save',
+        save: 'Guardar',
         //saveAdd: 'Save and Add Another',
         ok: 'OK',
-        cancel: 'Cancel',
+        cancel: 'Cancelar',
 
         // --- navigation/pagination ---
-        prev: 'Previous',
-        next: 'Next',
+        prev: 'Anterior',
+        next: 'Próximo',
 
         dropFile: 'Drop the file here, or click to select the file to upload.',
         //dropFiles: 'Drop files here, or click to select files to upload.',
@@ -50,53 +50,53 @@ module.exports = {
 
     // --- status ---
     i18n_msg:{
-        nodata: 'No {0} found.', // 0=entities
-        loading: 'Loading data...',
-        confirmLeave: 'Your work is not saved! Are you sure you want to leave?',
-        range: '{0} to {1} of {2} {3}',// 0=rangeBegin, 1=rangeEnd, 2=mSize, 3=entities'
-        xinz: '{0} of {1} {2}',// 0=mSize, 1=totSize, 2=entities'
+        nodata: '{0} no encontrado.', // 0=entities
+        loading: 'Cargando datos...',
+        confirmLeave: '¡Todavía no ha guardado su trabajo! ¿Seguro desea continuar?',
+        range: '{0} a {1} de {2} {3}',// 0=rangeBegin, 1=rangeEnd, 2=mSize, 3=entities'
+        xinz: '{0} de {1} {2}',// 0=mSize, 1=totSize, 2=entities'
         //sgn_money: '$', // indicator for money
         //sgn_email: '@', // indicator for email
-        added: 'New {0} "{1}" added.',
-        updated: '{0} "{1}" updated.',
-        deleted: '{0} "{1}" deleted.'
+        added: '{0} "{1}" agregado.',
+        updated: '{0} "{1}" actualizado.',
+        deleted: '{0} "{1}" eliminado.'
         //error: 'Error',
     },
 
     // --- validation ---
     i18n_validation:{
         //incomplete: 'Some information is missing or invalid.',
-        incomplete: 'Missing information.',
-        invalid: 'Invalid format.',
+        incomplete: 'Información incompleta.',
+        invalid: 'Formato invalido.',
         //invalidList: '{0} values in "{1}" are invalid.',
         //invalidList1: '1 value in "{1}" is invalid.',
         //intro: 'You are not finished yet: ',
-        empty: '"{0}" must have a value.',
-        email: '"{0}" must be a valid email formatted like "name@domain.com".',
-        integer: '"{0}" must only use numbers.',
-        decimal: '"{0}" must be a valid decimal numbers.',
-        money: '"{0}" must be a valid number.',
-        date: '"{0}" must be a valid date, format must be "MM/DD/YYYY" like "12/24/2017".',
+        empty: '"{0}" debe tener un valor.',
+        email: '"{0}" debe ser un email válido del tipo "juan@gmail.com".',
+        integer: '"{0}" debe usar solamente números.',
+        decimal: '"{0}" debe ser un número decimal válido.',
+        money: '"{0}" debe ser un número válido.',
+        date: '"{0}" debe ser una fecha válida, formato debe ser "MM/DD/AAAA" como "12/24/2017".',
         datetime: '"{0}" must be a valid date/time, format must be "MM/DD/YYYY hh:mm AM/PM" like "12/24/2017 10:30 AM".',
-        time: '"{0}" must be a valid date/time, format must be "hh:mm AM/PM" like "10:30 AM".',
+        time: '"{0}" debe ser un horario válido, formato debe ser "hh:mm:ss" como "10:30:00".',
         json: '"{0}" must be a valid JSON expression like "{"a": 1}".',
-        max: '"{0}" must be smaller or equal to {1}.',
-        min: '"{0}" must be greater or equal to {1}.',
-        maxLength: '"{0}" must be {1} characters long maximum.',
-        minLength: '"{0}" must be at least {1} characters long.',
-        minMaxLength: '"{0}" must be between {1} and {2} characters long.',
-        regExp: '"{0}" is not of the expected format.'
+        max: '"{0}" debe ser menor o igual a {1}.',
+        min: '"{0}" debe ser mayor o igual a {1}.',
+        maxLength: '"{0}" debe tener {1} caracteres máximo.',
+        minLength: '"{0}" debe tener al menos {1} caracteres.',
+        minMaxLength: '"{0}" debe estar entre {1} y {2} caracteres.',
+        regExp: '"{0}" no es el formato esperado.'
         //regExp: '"{0}" must match the regular expression pattern for "{1}".'
     },
 
     // --- charts ---
     i18n_charts:{
-        nocharts: 'No default charts.'
+        nocharts: 'No existen gráficos predefinidos.'
     },
 
     i18n_errors: {
-        badId: 'Couldn\'t retrieve data for id="{0}".',
-        badEntity: 'Invalid parameter: entity=\"{0}\".',
-        badChart: 'Couldn\'t retrieve charts data.'
+        badId: 'No se pudo obtener datos con id="{0}".',
+        badEntity: 'Parámetro inválido: entidad=\"{0}\".',
+        badChart: 'No se pudo obtener gráficos.'
     }
 };

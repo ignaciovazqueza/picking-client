@@ -86,12 +86,15 @@ export default React.createClass({
                 .catch(() => {
                     this.setState({
                         error: {
-                            message: 'Couldn\'t delete record.'
+                            message: 'No se pudo eliminar el registro.'
                         }
                     })
                 });
         }
-        this.closeModal()
+        this.closeModal();
+        setTimeout(function () {
+            location.reload();
+        }, 500)
     },
 
     exportMany(){
@@ -152,10 +155,10 @@ export default React.createClass({
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <button  onClick={this.closeModal} className="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 className="modal-title">Delete item</h4>
+                                    <h4 className="modal-title">Eliminar registro</h4>
                                 </div>
                                 <div className="modal-body">
-                                    Do you really want to delete the {models[entity].name}?
+                                    ¿Realmente desea eliminar este registro?
                                 </div>
                                 <div className="modal-footer">
                                     <button key="bDelCancel" onClick={this.closeModal} className="btn btn-default" data-dismiss="modal">{i18n_actions.cancel}</button>

@@ -30,16 +30,19 @@ export default React.createClass({
           <TopNav>
               <div className="evo-toolbar">
                   <ul role="nav" className="evo-nav-pills pull-left">
-                      <li><Link to="/todo/list" id="todo" className={entity==='todo'?'active':''}> To-Do</Link></li>
-                      <li><Link to="/contact/list" id="contact" className={entity==='contact'?'active':''}> Address Book</Link></li>
-                      <li><Link to="/comics/cards" id="comics" className={entity==='comics'?'active':''}> Comics</Link></li>
-                      <li><Link to="/restaurant/list" id="restaurant" className={entity==='restaurant'?'active':''}> Restaurants</Link></li>
-                      <li><Link to="/winecellar/list" id="winecellar" className={entity==='winecellar'?'active':''}> Wines</Link></li>
-                      <li><Link to="/winetasting/list" id="winetasting" className={entity==='winetasting'?'active':''}> Tastings</Link></li>
+                      <li><Link to="/accidentalert/list" id="accidentalert" className={entity==='accidentalert'?'active':''}>#Accidentes</Link></li>
+                      <li><Link to="/item/list" id="item" className={entity==='item'?'active':''}>#Artículos</Link></li>
+                      <li><Link to="/client/list" id="client" className={entity==='client'?'active':''}>#Clientes</Link></li>
+                      <li><Link to="/consolidatedinterface/list" id="consolidatedinterface" className={entity==='consolidatedinterface'?'active':''}>#Interfaces</Link></li>
+                      <li><Link to="/worker/list" id="worker" className={entity==='worker'?'active':''}>#Operarios</Link></li>
+                      <li><Link to="/pickingorder/list" id="pickingorder" className={entity==='pickingorder'?'active':''}>#Órdenes de pickeo</Link></li>
+                      <li><Link to="/controlsheet/list" id="controlsheet" className={entity==='controlsheet'?'active':''}>#Planillas de control</Link></li>
+                      <li><Link to="/preloadorder/list" id="preloadorder" className={entity==='preloadorder'?'active':''}>#Precarga</Link></li>
+                      <li><Link to="/repositionorder/list" id="repositionorder" className={entity==='repositionorder'?'active':''}>#Reposición</Link></li>
                   </ul>
                   <div className="clearer"/>
               </div>
-              <h2><Link to="/">Evolutility</Link></h2>
+              <h2><Link to="/">Picking</Link></h2>
               <div className="clearer"/>
               {entity ? <Toolbar key="tb" entity={entity} params={this.props.params} isNew={isNew} view={view}/> : null}
           </TopNav>

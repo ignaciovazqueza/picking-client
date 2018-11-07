@@ -43,7 +43,11 @@ export default withRouter(React.createClass({
 			v = this.validate(fields, this.state.data)
 
 		if(v.valid){
-			this.upsertOne()
+			this.upsertOne();
+			window.location.pathname = `/${this.props.params.entity}/list`;
+			setTimeout(function () {
+                location.reload();
+            }, 500)
 		}else{
 			//alert(v.messages.join('\n'))
 			this.setState({

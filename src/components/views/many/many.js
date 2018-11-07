@@ -48,7 +48,7 @@ export default function(){
 					this.setState({
 						error: {
 							title: 'Error',
-							message: 'Couldn\'t retrieve data.' //err.message
+							message: 'No se pudo obtener datos.' //err.message
 						},
 						loading: false
 					})

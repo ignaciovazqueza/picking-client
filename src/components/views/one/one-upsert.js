@@ -91,7 +91,7 @@ export default function(){
 					this.model.fieldsH[fid].list = response.data.map(function(d){
 						return {
 							id: d.id, 
-							text: d.text
+							text: d.text ? d.text : d.label ? d.label : d.id
 						}
 					})
 					this.refs[fid].forceUpdate()

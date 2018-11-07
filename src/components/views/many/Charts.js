@@ -45,7 +45,7 @@ export default React.createClass({
                         {chartFields.length ? chartFields.map(function(f){
                             return <Chart entity={e} key={'c-'+f.id} field={f} title={f.label} className="panel-default"/> 
                         }) : (
-                            <Alert title="No data" message={i18n_charts.nocharts} type="warning"/>
+                            <Alert title="No hay datos" message={i18n_charts.nocharts} type="warning"/>
                         )} 
                     </div>
 

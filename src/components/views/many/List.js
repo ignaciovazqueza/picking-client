@@ -120,7 +120,7 @@ export default React.createClass({
 				}else if(this.state.loading){
 					body = null
 				}else{
-					body = <Alert title="No data" message={i18n_msg.nodata.replace('{0}', m.namePlural)} type="info" />
+					body = <Alert title="No hay datos" message={i18n_msg.nodata.replace('{0}', m.namePlural)} type="info" />
 				}
 			}
 			return (
