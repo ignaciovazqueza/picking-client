@@ -26,7 +26,8 @@ module.exports = {
             type: "text",
             maxLength: 50,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "type",
@@ -36,7 +37,8 @@ module.exports = {
             list: worker_lovs.type,
             inMany: true,
             required: true,
-            lovtable: 'worker_type'
+            lovtable: 'worker_type',
+            width: 50
         },
     ],
 

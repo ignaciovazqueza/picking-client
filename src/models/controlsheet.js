@@ -29,7 +29,8 @@ module.exports = {
             type: "text",
             maxLength: 50,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "consolidatedinterface_id",
@@ -39,7 +40,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "consolidatedinterface"
+            lovtable: "consolidatedinterface",
+            width: 50
         },
         {
             id: "status",
@@ -57,7 +59,8 @@ module.exports = {
             column: "creation_date",
             type: "date",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "creation_time",
@@ -66,7 +69,8 @@ module.exports = {
             type: "time",
             maxLength: 8,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
     ],
 

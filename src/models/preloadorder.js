@@ -19,7 +19,8 @@ module.exports = {
             type: "text",
             maxLength: 50,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "consolidatedinterface_id",
@@ -29,7 +30,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "consolidatedinterface"
+            lovtable: "consolidatedinterface",
+            width: 50
         },
         {
             id: "worker_id",
@@ -39,7 +41,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "worker"
+            lovtable: "worker",
+            width: 50
         },
         {
             id: "freeSpace",
@@ -47,7 +50,8 @@ module.exports = {
             column: "freeSpace",
             type: "boolean",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "creation_date",
@@ -55,7 +59,8 @@ module.exports = {
             column: "creation_date",
             type: "date",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "creation_time",
@@ -64,7 +69,8 @@ module.exports = {
             type: "time",
             maxLength: 8,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         }
     ],
 

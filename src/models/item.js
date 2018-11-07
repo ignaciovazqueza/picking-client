@@ -19,7 +19,8 @@ module.exports = {
             type: "text",
             maxLength: 50,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "sku",
@@ -28,16 +29,8 @@ module.exports = {
             type: "text",
             maxLength: 20,
             inMany: true,
-            required: true
-        },
-        {
-            id: "position",
-            label: "Posición",
-            column: "position",
-            type: "text",
-            maxLength: 20,
-            inMany: true,
-            required: true
+            required: true,
+            width: 50
         }
     ],
 
@@ -45,7 +38,7 @@ module.exports = {
         {
             id: "p1", type: "panel",
             label: "Descripción", width: 100,
-            fields: ["name", "sku", "position"]
+            fields: ["name", "sku"]
         },
     ]
 };

@@ -19,7 +19,8 @@ module.exports = {
             type: "text",
             maxLength: 50,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "consolidatedinterface_id",
@@ -29,7 +30,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "consolidatedinterface"
+            lovtable: "consolidatedinterface",
+            width: 50
         },
         {
             id: "item_id",
@@ -39,7 +41,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "item"
+            lovtable: "item",
+            width: 33
         },
         {
             id: "quantity",
@@ -48,24 +51,37 @@ module.exports = {
             type: "integer",
             maxLength: 4,
             inMany: true,
-            required: true
+            required: true,
+            width: 33
         },
         {
-            id: "creation_date",
-            label: "Fecha de creación",
-            column: "creation_date",
+            id: "position",
+            label: "Posición",
+            column: "position",
+            type: "text",
+            maxLength: 20,
+            inMany: true,
+            required: true,
+            width: 33
+        },
+        {
+            id: "start_date",
+            label: "Fecha de inicio",
+            column: "start_date",
             type: "date",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
-            id: "creation_time",
-            label: "Horario de creación",
-            column: "creation_time",
+            id: "start_time",
+            label: "Horario de inicio",
+            column: "start_time",
             type: "time",
             maxLength: 8,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "end_date",
@@ -73,6 +89,7 @@ module.exports = {
             column: "end_date",
             type: "date",
             inMany: true,
+            width: 50
         },
         {
             id: "end_time",
@@ -81,14 +98,24 @@ module.exports = {
             type: "time",
             maxLength: 8,
             inMany: true,
-        }
+            width: 50
+        },
+        {
+            id: "picking_time",
+            label: "Tiempo de pickeo",
+            column: "picking_time",
+            type: "time",
+            maxLength: 8,
+            inMany: true,
+        },
+
     ],
 
     groups: [
         {
             id: "p1", type: "panel",
             label: "Descripción", width: 100,
-            fields: ["name", "consolidatedinterface_id", "item_id", "quantity", "creation_date", "creation_time", "end_date", "end_time"]
+            fields: ["name", "consolidatedinterface_id", "item_id", "quantity", "position", "start_date", "start_time", "end_date", "end_time"]
         },
     ]
 };

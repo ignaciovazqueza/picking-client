@@ -27,7 +27,8 @@ module.exports = {
             column: "creation_date",
             type: "date",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "creation_time",
@@ -36,7 +37,8 @@ module.exports = {
             type: "time",
             maxLength: 8,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
     ],
 

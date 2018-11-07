@@ -29,7 +29,8 @@ module.exports = {
             type: "lov",
             inMany: true,
             required: true,
-            lovtable: "item"
+            lovtable: "item",
+            width: 33
         },
         {
             id: "quantity",
@@ -38,7 +39,18 @@ module.exports = {
             type: "integer",
             maxLength: 4,
             inMany: true,
-            required: true
+            required: true,
+            width: 33
+        },
+        {
+            id: "position",
+            label: "Posición",
+            column: "position",
+            type: "text",
+            maxLength: 20,
+            inMany: true,
+            required: true,
+            width: 33
         },
         {
             id: "creation_date",
@@ -46,7 +58,8 @@ module.exports = {
             column: "creation_date",
             type: "date",
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
         {
             id: "creation_time",
@@ -55,7 +68,8 @@ module.exports = {
             type: "time",
             maxLength: 8,
             inMany: true,
-            required: true
+            required: true,
+            width: 50
         },
     ],
 
@@ -63,7 +77,7 @@ module.exports = {
         {
             id: "p1", type: "panel",
             label: "Descripción", width: 100,
-            fields: ["name", "item_id", "quantity", "creation_date", "creation_time"]
+            fields: ["name", "item_id", "quantity", "position", "creation_date", "creation_time"]
         },
     ]
 };
