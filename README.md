@@ -29,7 +29,7 @@ npm start
 
 In a web browser, go to the url [http://localhost:8080/](http://localhost:8080/).
 
-For the REST endpoints, you also need to setup [Picking-Server-Node](https://github.com/ignaciovazqueza/picking-server).
+For the REST endpoints, you also need to setup [Picking-Server](https://github.com/ignaciovazqueza/picking-server).
 
 
 ## Views
