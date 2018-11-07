@@ -39,6 +39,10 @@ function createOption(opt){
 	return <option key={opt.id} value={''+opt.id}>{opt.text}</option>
 }
 
+function reload() {
+	location.reload();
+}
+
 export default React.createClass({
 
 	propTypes: {
@@ -177,7 +181,7 @@ export default React.createClass({
 		}else if(f.type==='document'){
 			fw = format.doc(d, filesUrl)
 		}else if(f.type==='lov' && f.entity){
-			fw = <Link to={'/'+f.entity+'/browse/'+d_id}>{format.fieldValue(f, d)}</Link>
+			fw = <Link to={'/'+f.entity+'/browse/'+d_id} onClick={reload}>{format.fieldValue(f, d)}</Link>
 		}else {
 			fw = format.fieldValue(f, d)
 		}

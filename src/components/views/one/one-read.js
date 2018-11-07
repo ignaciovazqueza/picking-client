@@ -109,7 +109,10 @@ export default function(){
 		},
 
 		navigateBack(){
-			browserHistory.goBack()
+			browserHistory.goBack();
+            setTimeout(function () {
+                location.reload();
+            }, 20)
 		},
 
 		setModel(entity){

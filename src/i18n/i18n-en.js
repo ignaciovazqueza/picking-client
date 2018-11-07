@@ -9,7 +9,7 @@ module.exports = {
 
     // --- toolbar & buttons for actions ---
     i18n_actions:{
-        browse: 'Buscar',
+        browse: 'Ver',
         edit: 'Editar',
         // login: 'Login',
         new: 'Agregar',

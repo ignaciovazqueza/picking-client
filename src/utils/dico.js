@@ -118,14 +118,14 @@ module.exports = {
 	dataTitle: function(m, data, isNew){
 		if(m){
 			if(isNew){
-				return 'New ' + (m.name || 'item')
+				return 'Nuevo registro'
 			}else if(m.titleField && isFunction(m.titleField)){
 				return m.titleField(data)
 			}else{
 				return data[m.titleField] || m.label || m.title || ''
 			}
 		}else{
-			return 'New item'
+			return 'Registro'
 		}
 	},
 

@@ -125,7 +125,7 @@ export default React.createClass({
             }
         }
         const views = menuItems.views
-        const viewsList = ['list', 'cards', 'charts'].map(function(menu){
+        const viewsList = ['list', 'charts'].map(function(menu){
                             return buttonLink(views[menu], '', true)
                         })
         let actions = []
