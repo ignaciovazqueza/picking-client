@@ -5,7 +5,7 @@ module.exports = {
     active: true,
 
     titleField: "name",
-    searchFields: ["sku", "name", "position"],
+    searchFields: ["id", "name"],
 
     label: "Artículos",
     name: "artículo",
@@ -23,9 +23,9 @@ module.exports = {
             width: 50
         },
         {
-            id: "sku",
+            id: "id",
             label: "SKU",
-            column: "sku",
+            column: "id",
             type: "text",
             maxLength: 20,
             inMany: true,
@@ -38,7 +38,7 @@ module.exports = {
         {
             id: "p1", type: "panel",
             label: "Descripción", width: 100,
-            fields: ["name", "sku"]
+            fields: ["name"]
         },
     ]
 };

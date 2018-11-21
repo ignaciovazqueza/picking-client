@@ -31,6 +31,10 @@ module.exports = {
             return f.label || f.labelMany;
         }
 
+        if (f.label === 'SKU' && !v) {
+            return '';
+        }
+
         if(!f.readonly){
 
             // Check required and empty

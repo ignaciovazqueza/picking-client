@@ -199,27 +199,58 @@ export default withRouter(React.createClass({
 			invalids={},
 			cMsg;
 
-		fields.forEach((f) => {
-			cMsg = validation.validateField(f, data[f.id])
-			if(cMsg){
-				messages.push(cMsg)
-				invalids[f.id]=true
-				this.refs[f.id].setState({
-					invalid: true,
-					message: cMsg
-				})
-			}else if(this.refs[f.id].state.invalid===true){
-				this.refs[f.id].setState({
-					invalid: false,
-					message: null
-				})
-			}
-		})
-		return {
-			valid: messages.length<1,
-			messages: messages,
-			invalids: invalids
+        if (fields.filter(field => field.label === 'SKU').length > 0) {
+            fields.filter(field => field.label !== 'SKU').forEach((f) => {
+                cMsg = validation.validateField(f, data[f.id])
+
+                console.log(this.refs[f.id])
+                if(cMsg){
+                    messages.push(cMsg)
+                    invalids[f.id]=true
+                    this.refs[f.id].setState({
+                        invalid: true,
+                        message: cMsg
+                    })
+                }else if(this.refs[f.id].state.invalid===true){
+                    this.refs[f.id].setState({
+                        invalid: false,
+                        message: null
+                    })
+                }
+            })
+
+            return {
+                valid: messages.length<1,
+                messages: messages,
+                invalids: invalids
+            }
+		} else {
+            fields.forEach((f) => {
+                cMsg = validation.validateField(f, data[f.id])
+
+                console.log(this.refs[f.id])
+                if(cMsg){
+                    messages.push(cMsg)
+                    invalids[f.id]=true
+                    this.refs[f.id].setState({
+                        invalid: true,
+                        message: cMsg
+                    })
+                }else if(this.refs[f.id].state.invalid===true){
+                    this.refs[f.id].setState({
+                        invalid: false,
+                        message: null
+                    })
+                }
+            })
+
+            return {
+                valid: messages.length<1,
+                messages: messages,
+                invalids: invalids
+            }
 		}
+
 	},
 
 	clearValidation(){
